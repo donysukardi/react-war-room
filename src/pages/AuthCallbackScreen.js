@@ -7,7 +7,7 @@ function AuthCallbackScreen(props) {
 
   const params = new URLSearchParams(location.search);
   const code = params.get("code");
-  const tokenEndpoint = process.env.GITHUB_TOKEN_ENDPOINT;
+  const tokenEndpoint = process.env.REACT_APP_GITHUB_TOKEN_ENDPOINT;
 
   useEffect(() => {
     async function getToken() {
@@ -28,7 +28,7 @@ function AuthCallbackScreen(props) {
       }
     }
     getToken();
-  }, [code, setAccessToken, history]);
+  }, [code, setAccessToken, history, tokenEndpoint]);
 
   return "Logging you in...";
 }

@@ -4,8 +4,9 @@ import { Button } from "../components/common";
 import Layout from "../components/Layout";
 
 function LoginScreen() {
-  const clientId = process.env.CLIENT_ID;
-  const baseRedirectUri = process.env.PUBLIC_URL || window.location.origin;
+  const clientId = process.env.REACT_APP_CLIENT_ID;
+  const baseRedirectUri =
+    process.env.REACT_APP_PUBLIC_URL || window.location.origin;
   const redirectUri = `${baseRedirectUri}/auth/callback`;
   return (
     <Layout allowLogout={false}>
