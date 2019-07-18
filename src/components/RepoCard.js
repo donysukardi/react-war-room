@@ -83,7 +83,11 @@ function RepoCard({ name, owner, children }) {
         variant: "cards.default"
       }}
     >
-      <Flex>
+      <Flex
+        sx={{
+          flexDirection: ["column", "row"]
+        }}
+      >
         <img
           sx={{
             width: ["64px", "96px"],
@@ -97,7 +101,11 @@ function RepoCard({ name, owner, children }) {
           src={openGraphImageUrl}
           alt={`Open Graph of ${name}`}
         />
-        <Box>
+        <Box
+          sx={{
+            mt: [3, 0]
+          }}
+        >
           <Box
             sx={{
               fontSize: [3, 4],

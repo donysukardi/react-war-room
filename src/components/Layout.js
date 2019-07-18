@@ -22,6 +22,7 @@ function Layout({ allowLogout = true, children }) {
         <Flex
           sx={{
             p: 3,
+            flexDirection: ["column", "row"],
             justifyContent: "space-between",
             alignItems: "center",
             width: "100%"
@@ -42,6 +43,7 @@ function Layout({ allowLogout = true, children }) {
           </Box>
           <Flex
             sx={{
+              mt: [3, 0],
               alignItems: "center"
             }}
           >
