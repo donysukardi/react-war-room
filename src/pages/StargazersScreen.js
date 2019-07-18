@@ -102,7 +102,7 @@ function StargazersList(props) {
   // If there are more items to be loaded then add an extra item/row to hold a loading indicator.
   const itemCount = hasNextPage ? items.length + 1 : items.length;
   const rowCount = Math.ceil(itemCount / columnCount);
-  const isRowLoaded = index => !hasNextPage || index < rowCount;
+  const isRowLoaded = index => !hasNextPage || index < rowCount - 1;
 
   // Only load 1 page of items at a time.
   // Pass an empty callback to InfiniteLoader in case it asks us to load more than once.
