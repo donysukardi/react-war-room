@@ -1,0 +1,78 @@
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+ios/Pods/
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+
+# Visual Studo 2015 cache/options directory
+.vs/
+
+# Visual Studio Code
+.vscode/
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+coverage/
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+# Bundle artifact
+*.jsbundle
+android/app/bin
+android/.project
+android/app/.project
+android/.settings
+android/app/.settings
+android/app/.classpath
+
+.env
+system.js
+TestCoverageReportTemp
+report.*.json
+
+# Files for development only
+*.dev.js
