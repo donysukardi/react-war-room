@@ -15,7 +15,7 @@ import { noop, setRefs, mapGridToListOnItemsRendered } from "../utils/helpers";
 import { useMeasurements } from "../utils/hooks";
 
 export const GET_STARGAZERS_QUERY = gql`
-  query getRepository($owner: String!, $name: String!, $cursor: String) {
+  query getStargazers($owner: String!, $name: String!, $cursor: String) {
     repository(name: $name, owner: $owner) {
       stargazers(first: 96, after: $cursor) {
         pageInfo {

@@ -8,6 +8,13 @@ function LoginScreen() {
   const baseRedirectUri =
     process.env.REACT_APP_PUBLIC_URL || window.location.origin;
   const redirectUri = `${baseRedirectUri}/auth/callback`;
+
+  const params = new URLSearchParams();
+  params.append("client_id", clientId);
+  params.append("redirect_uri", redirectUri);
+  params.append("scope", "user");
+  const loginUrl = `https://github.com/login/oauth/authorize?${params}`;
+
   return (
     <Layout allowLogout={false}>
       <Box
@@ -40,10 +47,7 @@ function LoginScreen() {
           mt: 5
         }}
       >
-        <Button
-          as="a"
-          href={`https://github.com/login/oauth/authorize?client_id=${clientId}&scope=user&redirect_uri=${redirectUri}`}
-        >
+        <Button as="a" href={loginUrl}>
           Login with Github
         </Button>
       </Box>

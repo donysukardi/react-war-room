@@ -10,9 +10,9 @@ import Octicon, {
   GitPullRequest
 } from "@primer/octicons-react";
 
-const GET_REPOSITORY_STATS_QUERY = gql`
+export const GET_REPOSITORY_STATS_QUERY = gql`
   query getRepositoryStats($owner: String!, $name: String!) {
-    repository(name: $name, owner: $owner) {
+    repository(owner: $owner, name: $name) {
       name
       description
       openGraphImageUrl
@@ -54,22 +54,22 @@ function RepoCard({ name, owner, children }) {
 
   const stats = [
     {
-      label: "Stars",
+      label: "Stars count",
       icon: Star,
       count: stargazersCount
     },
     {
-      label: "Forks",
+      label: "Forks count",
       icon: RepoForked,
       count: forkCount
     },
     {
-      label: "Open issues",
+      label: "Open issues count",
       icon: IssueOpened,
       count: openIssuesCount
     },
     {
-      label: "Open pull requests",
+      label: "Open pull requests count",
       icon: GitPullRequest,
       count: openPullRequestsCount
     }
@@ -143,6 +143,7 @@ function RepoCard({ name, owner, children }) {
               <Octicon icon={stat.icon} />
             </span>
             <Box
+              data-testid={stat.label}
               sx={{
                 display: "inline-block",
                 ml: 2,
