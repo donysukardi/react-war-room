@@ -42,18 +42,18 @@ function DashboardScreen() {
       <DashboardGrid>
         <Heading>Allies</Heading>
         <RepoCard name="react" owner="facebook">
-          <Button as={Link} to={`/facebook/react`}>
+          <Button as={Link} to={`/facebook/react`} data-testid="view-react">
             View Stargazers
           </Button>
         </RepoCard>
         <Heading>Enemies</Heading>
         <RepoCard name="vue" owner="vuejs">
-          <Button as={Link} to={`/vuejs/vue`}>
+          <Button as={Link} to={`/vuejs/vue`} data-testid="view-vue">
             View Stargazers
           </Button>
         </RepoCard>
         <RepoCard name="angular" owner="angular">
-          <Button as={Link} to={`/angular/angular`}>
+          <Button as={Link} to={`/angular/angular`} data-testid="view-angular">
             View Stargazers
           </Button>
         </RepoCard>

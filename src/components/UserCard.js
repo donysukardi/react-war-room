@@ -2,7 +2,7 @@
 import { jsx, Box, Flex } from "theme-ui";
 import { absoluteFill, textOverflowEllipsis } from "./common";
 
-function UserCard({ avatarUrl, name, username, url }) {
+function UserCard({ avatarUrl, name, username, url, ...props }) {
   return (
     <Box
       sx={{
@@ -10,6 +10,7 @@ function UserCard({ avatarUrl, name, username, url }) {
         p: [3],
         variant: "cards.default"
       }}
+      {...props}
     >
       <Flex
         sx={{

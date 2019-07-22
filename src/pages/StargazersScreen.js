@@ -47,6 +47,7 @@ function Item({ data, columnIndex, rowIndex, style }) {
     const { node } = items[index];
     content = (
       <UserCard
+        data-testid={`user-card-${rowIndex}-${columnIndex}`}
         avatarUrl={node.avatarUrl}
         username={node.login}
         name={node.name}
@@ -129,7 +130,7 @@ function StargazersList(props) {
         });
 
   return (
-    <div>
+    <div data-testid="stargazers">
       <div ref={getRef("container")} />
       <WindowScroller onScroll={syncWindowToListScroll}>
         {() => <div />}
