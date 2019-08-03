@@ -14,47 +14,6 @@ body {
     "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 }
 
-.list-item {
-  padding: 16px;
-}
-
-.user-card {
-  border: 2px solid hsl(210, 23%, 95%);
-  background-color: white;
-  border-radius: 16px;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
 .window-scroller-override {
   height: 100% !important;
-}
-
-.avatar {
-  width: 48px;
-  height: 48px;
-  margin-right: 12px;
-  border-radius: 8px;
-  background-color: #eee;
-}
-
-.user-card__link {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  border-radius: 16px;
-}
-
-.repo-img {
-  width: 96px;
-  height: 96px;
-  background-color: white;
-  padding: 16px;
-  object-fit: cover;
-  border-radius: 24px;
 }
