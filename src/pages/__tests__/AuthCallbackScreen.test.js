@@ -1,4 +1,5 @@
 import React from "react";
+import { act } from "@testing-library/react";
 import { visit, flushPromises } from "../../utils/test";
 
 jest.mock("../DashboardScreen", () => () => <div>Dashboard screen</div>);
@@ -34,7 +35,10 @@ describe("AuthCallbackScreen", () => {
     const page = visit("/auth/callback?code=auth-code");
     expect(page.getByText("Logging you in...")).not.toBeNull();
 
-    await flushPromises();
+    await act(async () => {
+      await flushPromises();
+    });
+
     expect(page.getByText("Dashboard screen")).toBeInTheDocument();
     expect(localStorage.getItem("access_token")).toBe("sometoken");
   });

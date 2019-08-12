@@ -1,11 +1,10 @@
 import React from "react";
-import { wait, waitForElementToBeRemoved } from "@testing-library/react";
+import { wait, act } from "@testing-library/react";
 import { MockedProvider } from "@apollo/react-testing";
 import { GET_REPOSITORY_STATS_QUERY } from "../../components/RepoCard";
 import { GET_STARGAZERS_QUERY } from "../StargazersScreen";
 import { visit } from "../../utils/test";
 import { getMockRepoData, getMockStargazersData } from "../../utils/testData";
-import { useMeasurements } from "../../utils/hooks";
 
 let getItemSpy;
 
@@ -54,11 +53,13 @@ describe("StargazersScreen", () => {
     getItemSpy.mockImplementation(() => "someaccesstoken");
 
     const page = visit("/facebook/react");
-    jest.runAllTimers();
+    act(() => {
+      jest.runAllTimers();
+    });
 
     await wait(() => page.getByText("repo react"));
-    const currentCount = page.queryAllByText(/^login /).length;
-
+    const currentCount = page.queryAllByText(/^Github profile of login /)
+      .length;
     expect(currentCount).toBeGreaterThan(1);
   });
 });
