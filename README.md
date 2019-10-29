@@ -1,3 +1,11 @@
+You need the following environment variables to start this application. You can copy `.env.example` file as `.env` and replace the values accordingly
+
+```
+REACT_APP_CLIENT_ID=github-client-id
+REACT_APP_PUBLIC_URL=http://localhost:3000
+REACT_APP_GITHUB_TOKEN_ENDPOINT="Endpoint of running instance of https://github.com/prose/gatekeeper"
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
