@@ -1,3 +1,7 @@
+## Overview
+
+App showcasing use of GraphQL hooks, react-window, theme-ui.
+
 You need the following environment variables to start this application. You can copy `.env.example` file as `.env` and replace the values accordingly
 
 ```
